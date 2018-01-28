@@ -5,5 +5,6 @@ class Money
 
   def multiplication(times)
     @amount *= times
+    Money.new(@amount)
   end
 end

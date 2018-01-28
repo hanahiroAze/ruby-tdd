@@ -1,11 +1,10 @@
-class Money
+class Dollar 
   def initialize(amount)
     @amount = amount
   end
 
   def times(times)
-    @amount *= times
-    Money.new(@amount)
+    Dollar.new(@amount * times)
   end
 
   def amount

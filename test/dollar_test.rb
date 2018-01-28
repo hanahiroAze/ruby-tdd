@@ -9,5 +9,9 @@ class DollarTest < Minitest::Test
     product =five.times(3) 
     assert_equal 15, product.amount
   end
+
+  def test_equals
+    assert_equal(true, Dollar.new(5).equals(Dollar.new(5)))
+  end
 end
 

@@ -3,8 +3,12 @@ class Money
     @amount = amount
   end
 
-  def multiplication(times)
+  def times(times)
     @amount *= times
     Money.new(@amount)
+  end
+
+  def amount
+    @amount
   end
 end

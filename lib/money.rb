@@ -1,3 +1,7 @@
+class Money
+
+end
+
 class Dollar 
   def initialize(amount)
     @amount = amount

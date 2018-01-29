@@ -2,7 +2,7 @@ class Money
 
 end
 
-class Dollar 
+class Dollar < Money 
   def initialize(amount)
     @amount = amount
   end
@@ -24,7 +24,7 @@ class Dollar
   end
 end
 
-class Franc
+class Franc < Money
   def initialize(amount)
     @amount = amount
   end

@@ -14,4 +14,8 @@ class Dollar
   def amount
     @amount
   end
+
+  def ==(target)
+    self.equals(target)
+  end
 end

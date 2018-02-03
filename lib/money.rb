@@ -11,7 +11,7 @@ class Money
    self.equals(target)
  end
  
- def dollar(amount)
+ def self.dollar(amount)
    Dollar.new(amount)
  end
 end

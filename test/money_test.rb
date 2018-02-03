@@ -16,6 +16,7 @@ class MoneyTest < Minitest::Test
     assert_equal(false, Dollar.new(5).equals(Dollar.new(6)))
     assert_equal(true, Franc.new(5).equals(Franc.new(5)))
     assert_equal(false, Franc.new(5).equals(Franc.new(6)))
+    assert_equal(false, Franc.new(5).equals(Dollar.new(5)))
   end
 end
 

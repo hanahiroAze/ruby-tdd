@@ -28,10 +28,18 @@ class Dollar < Money
   def times(times)
     Dollar.new(@amount * times)
   end
+
+  def currency 
+    "USD"
+  end
 end
 
 class Franc < Money
   def times(times)
     Franc.new(@amount * times)
+  end
+
+  def currency
+    "CHF"
   end
 end

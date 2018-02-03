@@ -3,7 +3,7 @@ require './lib/money.rb'
 
 class MoneyTest < Minitest::Test
   def test_times
-    five = Dollar.new(5)
+    five = Money.dollar(5)
     assert_equal Dollar.new(10), five.times(2)
     assert_equal Dollar.new(15), five.times(3)
     five = Franc.new(5)

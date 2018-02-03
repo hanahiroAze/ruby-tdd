@@ -4,8 +4,8 @@ require './lib/money.rb'
 class MoneyTest < Minitest::Test
   def test_times
     five = Money.dollar(5)
-    assert_equal Dollar.new(10), five.times(2)
-    assert_equal Dollar.new(15), five.times(3)
+    assert_equal Money.dollar(10), five.times(2)
+    assert_equal Money.dollar(15), five.times(3)
     five = Franc.new(5)
     assert_equal Franc.new(10), five.times(2)
     assert_equal Franc.new(15), five.times(3)

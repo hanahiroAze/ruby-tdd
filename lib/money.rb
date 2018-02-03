@@ -1,6 +1,6 @@
 class Money
  def equals(obj)
-    obj.amount == @amount
+   obj.amount == @amount && obj.class == self.class
  end
 
  def amount

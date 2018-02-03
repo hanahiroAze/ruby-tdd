@@ -1,4 +1,8 @@
 class Money
+ def initialize(amount)
+    @amount = amount
+ end
+
  def equals(obj)
    obj.amount == @amount && obj.class == self.class
  end
@@ -17,20 +21,12 @@ class Money
 end
 
 class Dollar < Money 
-  def initialize(amount)
-    @amount = amount
-  end
-  
   def times(times)
     Dollar.new(@amount * times)
   end
 end
 
 class Franc < Money
-  def initialize(amount)
-    @amount = amount
-  end
-
   def times(times)
     Franc.new(@amount * times)
   end

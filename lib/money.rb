@@ -10,6 +10,10 @@ class Money
  def ==(target)
    self.equals(target)
  end
+ 
+ def dollar(amount)
+   Dollar.new(amount)
+ end
 end
 
 class Dollar < Money 

@@ -12,11 +12,11 @@ class MoneyTest < Minitest::Test
   end
 
   def test_equals
-    assert_equal(true, Dollar.new(5).equals(Dollar.new(5)))
-    assert_equal(false, Dollar.new(5).equals(Dollar.new(6)))
+    assert_equal(true, Money.dollar(5).equals(Money.dollar(5)))
+    assert_equal(false, Money.dollar(5).equals(Money.dollar(6)))
     assert_equal(true, Franc.new(5).equals(Franc.new(5)))
     assert_equal(false, Franc.new(5).equals(Franc.new(6)))
-    assert_equal(false, Franc.new(5).equals(Dollar.new(5)))
+    assert_equal(false, Franc.new(5).equals(Money.dollar(5)))
   end
 end
 

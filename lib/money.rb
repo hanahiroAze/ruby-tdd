@@ -11,6 +11,10 @@ class Money
    @amount
  end
 
+ def currency
+  @currency
+ end
+
  def ==(target)
    self.equals(target)
  end
@@ -25,21 +29,23 @@ class Money
 end
 
 class Dollar < Money 
-  def times(times)
-    Dollar.new(@amount * times)
+  def initialize(amount)
+    super(amount)
+    @currency = "USD"
   end
 
-  def currency 
-    "USD"
+  def times(times)
+    Dollar.new(@amount * times)
   end
 end
 
 class Franc < Money
-  def times(times)
-    Franc.new(@amount * times)
+  def initialize(amount)
+    super(amount)
+    @currency = "CHF"
   end
 
-  def currency
-    "CHF"
+  def times(times)
+    Franc.new(@amount * times)
   end
 end

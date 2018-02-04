@@ -33,8 +33,3 @@ class Money
  end
 end
 
-class Dollar < Money 
-end
-
-class Franc < Money
-end

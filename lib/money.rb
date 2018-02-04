@@ -5,7 +5,7 @@ class Money
  end
 
  def equals(obj)
-   obj.amount == @amount && obj.class == self.class
+   obj.amount == @amount && self.currency == obj.currency 
  end
 
  def amount
@@ -31,14 +31,12 @@ end
 
 class Dollar < Money 
   def times(times)
-    #Money.dollar(@amount * times)
-    Dollar.new(@amount * times, @currency) 
+    Money.new(@amount * times, @currency)
   end
 end
 
 class Franc < Money
   def times(times)
-    #Money.franc(@amount * times)
-    Franc.new(@amount * times, @currency)
+    Money.new(@amount * times, @currency)
   end
 end

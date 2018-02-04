@@ -35,7 +35,7 @@ class Dollar < Money
   end
 
   def times(times)
-    Dollar.new(@amount * times, nil)
+    Money.dollar(@amount * times)
   end
 end
 
@@ -46,6 +46,6 @@ class Franc < Money
   end
 
   def times(times)
-    Franc.new(@amount * times, nil)
+    Money.franc(@amount * times)
   end
 end

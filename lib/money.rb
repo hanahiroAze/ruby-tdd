@@ -8,6 +8,10 @@ class Money
    obj.amount == @amount && self.currency == obj.currency 
  end
 
+ def times(times)
+    Money.new(@amount * times, @currency)
+ end
+
  def amount
    @amount
  end
@@ -30,13 +34,7 @@ class Money
 end
 
 class Dollar < Money 
-  def times(times)
-    Money.new(@amount * times, @currency)
-  end
 end
 
 class Franc < Money
-  def times(times)
-    Money.new(@amount * times, @currency)
-  end
 end

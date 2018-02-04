@@ -20,32 +20,32 @@ class Money
  end
  
  def self.dollar(amount)
-   Dollar.new(amount)
+   Dollar.new(amount, nil)
  end
 
  def self.franc(amount)
-   Franc.new(amount)
+   Franc.new(amount, nil)
  end
 end
 
 class Dollar < Money 
-  def initialize(amount)
+  def initialize(amount, currency)
     super(amount)
     @currency = "USD"
   end
 
   def times(times)
-    Dollar.new(@amount * times)
+    Dollar.new(@amount * times, nil)
   end
 end
 
 class Franc < Money
-  def initialize(amount)
+  def initialize(amount, currency)
     super(amount)
     @currency = "CHF"
   end
 
   def times(times)
-    Franc.new(@amount * times)
+    Franc.new(@amount * times, nil)
   end
 end

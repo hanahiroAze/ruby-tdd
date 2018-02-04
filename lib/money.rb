@@ -32,13 +32,13 @@ end
 class Dollar < Money 
   def times(times)
     #Money.dollar(@amount * times)
-    Dollar.new(@amount * times, "USD") 
+    Dollar.new(@amount * times, @currency) 
   end
 end
 
 class Franc < Money
   def times(times)
     #Money.franc(@amount * times)
-    Franc.new(@amount * times, "CHF") 
+    Franc.new(@amount * times, @currency)
   end
 end

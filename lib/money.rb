@@ -1,6 +1,7 @@
 class Money
- def initialize(amount)
+ def initialize(amount, currency)
     @amount = amount
+    @currency = currency
  end
 
  def equals(obj)
@@ -12,7 +13,7 @@ class Money
  end
 
  def currency
-  @currency
+   @currency
  end
 
  def ==(target)
@@ -29,22 +30,12 @@ class Money
 end
 
 class Dollar < Money 
-  def initialize(amount, currency)
-    super(amount)
-    @currency = "USD"
-  end
-
   def times(times)
     Money.dollar(@amount * times)
   end
 end
 
 class Franc < Money
-  def initialize(amount, currency)
-    super(amount)
-    @currency = "CHF"
-  end
-
   def times(times)
     Money.franc(@amount * times)
   end
